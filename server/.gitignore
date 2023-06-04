@@ -1,0 +1,3 @@
+# .gitignore file prevents the listed files from being pushed to repository (because of overhaul or for security)
+/node_modules
+.env
