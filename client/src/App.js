@@ -6,7 +6,10 @@ import { useMemo } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "scenes/dashboard";
 import Layout from "scenes/layout";
-
+import Products from "scenes/products";
+import Customers from "scenes/customers";
+import Transactions from "scenes/transactions";
+import Geography from "scenes/geography";
 
 function App() {
   const mode = useSelector((state) => state.global.mode); // Way to grab global state from within state folder (index.js)
@@ -19,7 +22,11 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} /> {/* Creates route to Dashboard page with layout */}
+              <Route path="/products" element={<Products />} /> {/* Creates route to products page with layout */}
+              <Route path="/customers" element={<Customers />} />  {/* Creates route to customers page with layout */}
+              <Route path="/transactions" element={<Transactions />} /> {/* Creates route to transactions page with layout */}
+              <Route path="/geography" element={<Geography />} />
             </Route>
           </Routes>
         </ThemeProvider>

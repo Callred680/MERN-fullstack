@@ -33,7 +33,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/images.jpeg";
 
-const navItems =[ // Creates list of objectsto be used within navbar (each specified tab with name and icon)
+const navItems =[ // Creates list of objects to be used within navbar (each specified tab with name and icon)
     
     {
         // Name and icon for tab within sidebar
@@ -211,12 +211,12 @@ const Sidebar = ({
                         <Box textAlign="left">
                             <Typography     // Sets up user's name
                             fontWeight="bold" 
-                            fontSize="0.9rem"
+                            fontSize="0.85rem"
                             sx={{color: theme.palette.secondary[100]}}>
                                 {user.name} {/* Displays user's name in bottom left */}
                             </Typography>
                             <Typography // Sets up user's occupation
-                            fontSize="0.8rem"
+                            fontSize="0.75rem"
                             sx={{color: theme.palette.secondary[200]}}>
                                 {user.occupation}   {/* Displays user's occupation below user's name in bottom left */}
                             </Typography>
